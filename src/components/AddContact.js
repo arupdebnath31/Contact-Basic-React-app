@@ -14,6 +14,7 @@ class AddContact extends Component {
     this.props.addContactHandler(this.state);
     // console.log(this.state);
     this.setState({ name: "", email: "" }); // clearing the state here....
+    this.props.history.push("/") // redirected to the home 
   };
   render() {
     return (
