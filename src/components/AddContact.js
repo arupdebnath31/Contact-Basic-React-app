@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 
 class AddContact extends Component {
-state = {
-  name: "",
-  email: "",
-}
+  state = {
+    name: "",
+    email: "",
+  };
   add = (e) => {
     e.preventDefault();
     if (this.state.name === "" || this.state.email === "") {
@@ -13,7 +13,7 @@ state = {
     }
     this.props.addContactHandler(this.state);
     // console.log(this.state);
-    this.setState({name: "" ,email: ""}); // clearing the state here....
+    this.setState({ name: "", email: "" }); // clearing the state here....
   };
   render() {
     return (
@@ -41,9 +41,7 @@ state = {
               onChange={(e) => this.setState({ email: e.target.value })}
             />
           </div>
-          <button  className="ui button blue">
-            Add
-          </button>
+          <button className="ui button blue">Add</button>
         </form>
       </div>
     );
